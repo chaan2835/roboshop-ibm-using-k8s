@@ -14,7 +14,7 @@ type: Opaque
 data:
   MYSQL_USER: c2hpcHBpbmc=
   MYSQL_PASSWORD: c2VjcmV0
-  MYSQL_ROOT_PASSWORD: "Y2hhbmRyYUAyODM1"
+  MYSQL_ROOT_PASSWORD: Y2hhbmRyYUAyODM1
 ---
 apiVersion: v1 
 kind: Pod 
