@@ -2,14 +2,16 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: catalogue
+  name: mongodb
   labels:
-    name: catalogue
-    tire: app 
+    name: mongodb
+    tire: db
 spec:
   containers:
-  - name: catalogue
-    image: chaan2835/catalogue:k8 
+  - name: mongodb
+    image: chaan2835/mongodb:k8
+    ports:
+    - containerPort: 80
     resources:
       requests:
         cpu: "100m"
@@ -18,16 +20,15 @@ spec:
         cpu: "100m"
         memory: "128Mi"
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
-  name: catalogue-service
+  name: mongodb
 spec:
   selector:
-    name: catalogue
-    tire: app
+    name: mongodb
+    tire: db
   ports:
     - protocol: TCP
-      port: 8080
-      targetPort: 8080
+      port: 80   
+      targetPort: 27017
