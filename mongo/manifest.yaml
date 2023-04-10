@@ -30,5 +30,5 @@ spec:
     tire: db
   ports:
     - protocol: TCP
-      port: 80  #-->1st change changed to 80 
+      port: 80   #-->1st change changed to 80 
       targetPort: 27017
