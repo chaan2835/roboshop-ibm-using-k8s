@@ -11,7 +11,7 @@ spec:
   - name: mongodb
     image: chaan2835/mongodb:k8
     ports:
-    - conatainerPort: 80
+    - containerPort: 80
     resources:
       requests:
         cpu: "100m"
