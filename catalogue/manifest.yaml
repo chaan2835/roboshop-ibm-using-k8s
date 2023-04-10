@@ -16,7 +16,7 @@ metadata:
     tire: app
   spec:
     containers:
-      - name: catalogue
+    - name: catalogue
       image: chaan2835/catalogue:k8
     envFrom:
     - configMapRef:
