@@ -10,7 +10,7 @@ data:
 apiVersion: v1 
 kind: Secret
 metadata:
-  name: mysql-mysecret
+  name: mysql-secret
 type: Opaque
 data:
   username: c2hpcHBpbmc=
