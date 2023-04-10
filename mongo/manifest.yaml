@@ -10,8 +10,8 @@ spec:
   containers:
   - name: mongodb
     image: chaan2835/mongodb:k8
-	ports:
-	- conatainerPort: 80 
+    ports:
+    - conatainerPort: 80
     resources:
       requests:
         cpu: "100m"
@@ -30,5 +30,5 @@ spec:
     tire: db
   ports:
     - protocol: TCP
-      port: 80  
+      port: 80  -->1st change changed to 80 
       targetPort: 27017
