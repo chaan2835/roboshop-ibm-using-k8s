@@ -35,7 +35,7 @@ spec:
         name: mysql-secret
     ports:
       - containerPort: 3306
-    resouces:
+    resources:
       requests:
         cpu: "100m"
         memory: "128Mi"
