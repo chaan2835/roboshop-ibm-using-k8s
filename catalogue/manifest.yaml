@@ -18,16 +18,16 @@ spec:
   containers:
   - name: catalogue
     image: chaan2835/catalogue:k8
-  envFrom:
-  - configMapRef:
-    name: catalogue-config
-  resources:
-    requests:
-      cpu: "100m"
-      memory: "128Mi"
-    limits:
-      cpu: "100m"
-      memory: "128Mi"
+    envFrom:
+    - configMapRef:
+      name: catalogue-config
+    resources:
+      requests:
+        cpu: "100m"
+        memory: "128Mi"
+      limits:
+        cpu: "100m"
+        memory: "128Mi"
 ---
 apiVersion: v1
 kind: Service
