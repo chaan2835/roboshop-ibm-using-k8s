@@ -17,10 +17,10 @@ metadata:
   spec:
   containers:
   - name: catalogue
-    image: chaan2835/catalogue:k8 
-	envFrom:
-	- configMapRef:
-		name: catalogue-config
+    image: chaan2835/catalogue:k8
+    envFrom:
+    - configMapRef:
+      name: catalogue-config
     resources:
       requests:
         cpu: "100m"
