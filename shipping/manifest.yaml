@@ -1,0 +1,44 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: shipping-config
+data:
+  CART_ENDPOINT: "80"
+  DB-HOST: "mysql"
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: shipping
+  labels:
+    name: shipping
+    tire: app
+spec:
+  containers:
+  - name: shipping
+    image: chaan2835/shipping:k8
+    envFrom:
+    - configMapRef:
+        name: shipping-config
+    resources:
+      requests:
+        cpu: "100m"
+        memory: "128Mi"
+      limits:
+        cpu: "100m"
+        memory: "128Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shipping
+spec:
+  selector:
+    name: shipping
+    tire: app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
