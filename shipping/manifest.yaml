@@ -4,7 +4,7 @@ kind: ConfigMap
 metadata:
   name: shipping-config
 data:
-  CART_ENDPOINT: "80"
+  CART_ENDPOINT: "cart"
   DB-HOST: "mysql"
 
 ---
